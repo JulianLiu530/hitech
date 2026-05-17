@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HiTech Strategic Deck - Group 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+@page { size: 1280px 720px; margin: 0 }
+@media print { body { padding: 0 !important; gap: 0 !important } .slide { margin: 0 !important } }
+*{box-sizing:border-box}
+body{background:#01040a;margin:0;padding:30px 0;display:flex;flex-direction:column;align-items:center;gap:30px}
+.slide{width:1280px;height:720px;background:#050b14;color:#fff;font-family:'Inter',sans-serif;overflow:hidden;position:relative;display:flex;flex-direction:column;padding:55px 75px;page-break-after:always}
+.slide::before{content:'';position:absolute;top:-15%;left:-10%;width:45%;height:45%;background:radial-gradient(circle,rgba(0,80,136,.25) 0%,transparent 75%);z-index:0}
+.accent{position:absolute;top:0;left:0;width:100%;height:6px;background:linear-gradient(90deg,#005088,#0088ff,#00e5a0)}
+.head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;z-index:1}
+.title{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;margin:0;border-left:6px solid #005088;padding-left:18px;text-transform:uppercase;letter-spacing:1px;max-width:850px;line-height:1.2}
+.tag{font-size:13px;background:rgba(0,136,255,.15);color:#60a5fa;padding:6px 14px;border-radius:4px;border:1px solid rgba(0,136,255,.4);font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;margin-top:8px}
+h3{color:#0088ff;font-size:23px;margin:0 0 14px 0;text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+h4{color:#fff;font-size:21px;margin:0 0 10px 0;font-weight:700}
+p{font-size:20px;line-height:1.5;color:#cbd5e1;margin:0 0 8px 0}
+.key{color:#fff;font-weight:700}
+.hl{color:#ffcc00;font-weight:700}
+.ok{color:#00e5a0;font-weight:700}
+.bad{color:#ff4444;font-weight:700}
+.body-area{flex:1;display:flex;flex-direction:column;justify-content:center;z-index:1}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.split-40{display:grid;grid-template-columns:420px 1fr;gap:40px;align-items:center}
+.card{background:#0f172a;border:1px solid #1e293b;padding:24px;border-radius:4px}
+.card.danger{border-left:6px solid #ff4444}
+.card.success{border-left:6px solid #00e5a0}
+.card.primary{border-left:6px solid #0088ff}
+.card.warn{border-left:6px solid #ffcc00}
+.big{font-size:90px;font-weight:700;color:#0088ff;line-height:1;margin:0}
+.sub{font-size:18px;color:#94a3b8;font-weight:700;margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
+.lead{font-size:24px;color:#cbd5e1;line-height:1.5}
+.lg{font-size:24px;color:#fff;line-height:1.45}
+table{width:100%;border-collapse:collapse}
+th{background:#0f172a;color:#94a3b8;text-align:left;padding:12px 14px;font-size:15px;text-transform:uppercase;border-bottom:2px solid #1e293b;letter-spacing:.5px}
+td{padding:12px 14px;border-bottom:1px solid #1e293b;font-size:19px;color:#cbd5e1;vertical-align:top;line-height:1.4}
+.head-cell{font-weight:700;color:#0088ff}
+.img-wrap{border-radius:4px;overflow:hidden;height:400px;border:1px solid #1e293b}
+.img-wrap img{width:100%;height:100%;object-fit:cover}
+.foot{font-size:12px;color:#475569;font-style:italic;border-top:1px solid #1e293b;padding-top:12px;margin-top:12px;display:flex;justify-content:space-between;z-index:1}
+.num{font-weight:700;color:#64748b;font-style:normal}
+.step{font-size:14px;letter-spacing:4px;color:#0088ff;font-weight:700;text-transform:uppercase;margin-bottom:18px}
+.divider .body-area{align-items:flex-start}
+.divider h1{font-family:'Playfair Display',serif;font-size:68px;line-height:1.1;margin:0 0 22px 0;font-weight:700;color:#fff}
+.bullet{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.bullet i{color:#0088ff;margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<div class="slide" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1280&q=90" style="position:absolute;width:100%;height:100%;object-fit:cover;opacity:.4">
+  <div style="position:relative;z-index:1;height:100%;background:linear-gradient(to right,#050b14 50%,rgba(5,11,20,.3) 100%);padding:90px;display:flex;flex-direction:column;justify-content:center">
+    <p class="step" style="margin-bottom:18px;font-size:18px">MGNT 5506 &middot; Strategic Management</p>
+    <h1 style="font-family:'Playfair Display';font-size:80px;margin:0;line-height:1.1;max-width:1000px;color:#fff">HiTech Techno Limited</h1>
+    <h2 style="font-size:34px;font-weight:400;color:#0088ff;margin:24px 0 0 0;letter-spacing:.5px;text-transform:uppercase">From Word-of-Mouth to World-of-Mouth</h2>
+    <div style="margin-top:110px;border-top:1px solid rgba(255,255,255,.15);padding-top:24px;width:820px">
+      <p style="font-size:17px;letter-spacing:2px;font-weight:700;color:#94a3b8;text-transform:uppercase;margin:0 0 14px 0">Group 2 &middot; Circuit Minds &middot; 6 Members &middot; 5 Presenting</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 30px;margin-top:8px">
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Ludicheva, Daria <span style="color:#64748b">&middot; 1155231260</span></p>
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Huang, Qiao Chu <span style="color:#64748b">&middot; 1155240990</span></p>
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Jain, Bhavya <span style="color:#64748b">&middot; 1155245356</span></p>
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Liu, Zhi Lang <span style="color:#64748b">&middot; 1155249134</span></p>
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Pu, Jun Qi <span style="color:#64748b">&middot; 1155249129</span></p>
+        <p style="font-size:18px;color:#cbd5e1;margin:0">Niu, Zhi <span style="color:#64748b">&middot; 1155236972</span></p>
+      </div>
+      <p style="font-size:16px;color:#64748b;margin:18px 0 0 0">CUHK MiM &middot; May 2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- 2 DIAGEO FLOW -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">How We Will Sell This Idea</h2><span class="tag">Diageo Way of Selling</span></div>
+  <div class="body-area">
+    <div class="row4">
+      <div class="card primary"><h4 style="color:#0088ff">1 &middot; Situation</h4><p style="font-size:18px">The growth ceiling Ben actually faces.</p></div>
+      <div class="card primary"><h4 style="color:#0088ff">2 &middot; Big IDEA</h4><p style="font-size:18px">One sentence. In his language.</p></div>
+      <div class="card primary"><h4 style="color:#0088ff">3 &middot; How It Works</h4><p style="font-size:18px">Frameworks plus three concrete pillars.</p></div>
+      <div class="card success"><h4 style="color:#00e5a0">4 &middot; Benefits</h4><p style="font-size:18px">ROI, budget, risk &mdash; tied to his issue.</p></div>
+    </div>
+    <div style="margin-top:30px;text-align:center;padding:22px;background:rgba(0,229,160,.05);border:1px solid rgba(0,229,160,.3);border-radius:4px">
+      <p class="lg"><span class="ok">5 &middot; Easy Next Step &rarr;</span> a &yen;2,000, 30-day, reversible pilot.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Each step maps to a deck section. No filler.</span><span class="num">02</span></div>
+</div>
+
+<!-- 3 DIVIDER 1 -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Step 1 &mdash; Situation</p>
+    <h1>Summarize the Situation</h1>
+    <p class="lead" style="max-width:900px">Where HiTech stands today, why we picked them, and the specific issue worth solving.</p>
+  </div>
+  <div class="foot"><span>Identify the category opportunity affecting the customer.</span><span class="num">03</span></div>
+</div>
+
+<!-- 4 COMPANY SELECTION (Q1) -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">How We Picked HiTech</h2><span class="tag">Syllabus Q1</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div>
+        <h3>Three Filters</h3>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p><span class="key">Real operations</span> &mdash; 120-150 orders/month, 8-year track record.</p></div>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p><span class="key">Verifiable assets</span> &mdash; Tier-1 NVIDIA / Samsung authorizations.</p></div>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p><span class="key">Stated expansion intent</span> &mdash; founder actively seeking mainland entry.</p></div>
+      </div>
+      <div class="card primary">
+        <h3>Why It Fits the Course</h3>
+        <p>A classic SME paradox: <span class="key">physically strong, digitally invisible.</span></p>
+        <p style="margin-top:12px">Perfect canvas for VRIO, Five Forces, Value Chain, and Generic Strategy frameworks.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Selected from 4 candidate firms after a 1-week scoping round.</span><span class="num">04</span></div>
+</div>
+
+<!-- 5 SITUATION -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">The Ceiling Ben Hit</h2><span class="tag">Situation</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div class="card danger">
+        <h3>What's Wrong</h3>
+        <p><span class="key">40 accounts, 100% referral, zero digital presence.</span></p>
+        <p style="margin-top:14px"><span class="key">48-hour</span> quote latency on manual PDFs.</p>
+        <p style="margin-top:14px"><span class="key">0 impressions</span> on mainland B2B search platforms.</p>
+      </div>
+      <div class="card success">
+        <h3>What's Possible</h3>
+        <p>Mainland procurement managers <span class="key">actively search</span> for HK Tier-1 authorized stock.</p>
+        <p style="margin-top:14px">HiTech's offline assets are <span class="key">exactly what they want</span> &mdash; just unreachable today.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>The opportunity is not new capability. It is making existing capability findable.</span><span class="num">05</span></div>
+</div>
+
+<!-- 6 STRATEGIC ISSUE (Q2) -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Why This Issue, Not Another</h2><span class="tag">Syllabus Q2</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card danger"><h4 class="bad">Important</h4><p>Without digital reach, HiTech caps at 40 accounts forever. Single-shock risk.</p></div>
+      <div class="card warn"><h4 class="hl">Urgent</h4><p>Class 2 punctuated equilibrium: the industry is digitizing now, not later.</p></div>
+      <div class="card success"><h4 class="ok">Solvable</h4><p>Solvable with &yen;5,000 and 6 months &mdash; not a multi-year transformation.</p></div>
+    </div>
+    <p class="lg" style="margin-top:30px;text-align:center">Strategic issue: <span class="hl">unlocking trapped competitive advantage through digital organization.</span></p>
+  </div>
+  <div class="foot"><span>Passes the important &times; urgent &times; actionable test.</span><span class="num">06</span></div>
+</div>
+
+<!-- 7 METHOD (Q3+Q4) -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">How We Analyzed It</h2><span class="tag">Syllabus Q3 &amp; Q4</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card primary"><h3>First-Hand</h3><p>3 &times; 45-min depth interviews with Ben. 1 full shadowing day on customs and routing.</p></div>
+      <div class="card primary"><h3>Archival</h3><p>Tier-1 contracts. Sales ledger 2022-2025. 1688 / Baidu competitor SEO audit.</p></div>
+      <div class="card primary"><h3>Buyer Audit</h3><p>10 mainland procurement managers interviewed on real sourcing workflow.</p></div>
+    </div>
+    <div style="margin-top:24px;padding:20px;background:rgba(0,136,255,.06);border:1px solid rgba(0,136,255,.3);border-radius:4px">
+      <p style="font-size:20px"><span class="key">Group rhythm:</span> weekly Saturday red-team sessions where each member challenged the others' slides as if grading.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Triangulated: founder voice plus records plus buyer-side reality check.</span><span class="num">07</span></div>
+</div>
+
+<!-- 8 DIVIDER 2 -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Step 2 &mdash; Big IDEA</p>
+    <h1>State the Big IDEA</h1>
+    <p class="lead" style="max-width:900px">One sentence. In Ben's language. With numbers he can defend.</p>
+  </div>
+  <div class="foot"><span>The idea that resolves the issue identified in Step 1.</span><span class="num">08</span></div>
+</div>
+
+<!-- 9 BIG IDEA -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">The Big IDEA</h2><span class="tag">One Sentence</span></div>
+  <div class="body-area">
+    <div style="text-align:center;padding:50px 40px;background:rgba(0,229,160,.05);border:2px solid rgba(0,229,160,.4);border-radius:6px">
+      <p class="step" style="margin-bottom:20px">Focused Differentiation</p>
+      <p style="font-family:'Playfair Display',serif;font-size:40px;color:#fff;line-height:1.3;margin:0">Turn 8 years of <span class="hl">hidden trust</span> into searchable, verifiable, <span class="hl">4-hour</span> digital advantage.</p>
+      <p class="lead" style="margin-top:30px">&yen;5,000 cap. 12 months. 10+ new mainland accounts. <span class="ok">100:1 ROI.</span></p>
+    </div>
+  </div>
+  <div class="foot"><span>Numbers Ben can repeat to his brother and to his bank.</span><span class="num">09</span></div>
+</div>
+
+<!-- 10 DIVIDER 3 -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Step 3 &mdash; How It Works</p>
+    <h1>Explain How It Works</h1>
+    <p class="lead" style="max-width:900px">Frameworks first, then three concrete activity pillars that integrate like Southwest's system.</p>
+  </div>
+  <div class="foot"><span>Cover the criteria customers use to make decisions.</span><span class="num">10</span></div>
+</div>
+
+<!-- 11 FIVE FORCES -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">External &middot; Five Forces</h2><span class="tag">Class 2</span></div>
+  <div class="body-area">
+    <table>
+      <thead><tr><th>Force</th><th>Intensity</th><th>Implication for HiTech</th></tr></thead>
+      <tbody>
+        <tr><td class="head-cell">Substitutes</td><td class="bad">CRITICAL</td><td>Digital platforms disintermediate traditional distributors.</td></tr>
+        <tr><td class="head-cell">Rivalry</td><td class="bad">CRITICAL</td><td>Giants dominate scale; grey shops dominate price.</td></tr>
+        <tr><td class="head-cell">Buyer Power</td><td class="hl">MID-HIGH</td><td>Cost-sensitive, but pay premium for verified authenticity.</td></tr>
+        <tr><td class="head-cell">Supplier Power</td><td class="hl">MEDIUM</td><td>Tier-1 contracts neutralize squeeze risk.</td></tr>
+        <tr><td class="head-cell">New Entrants</td><td class="ok">MEDIUM</td><td>Tier-1 credentials are a real moat against grey shops.</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:18px;text-align:center;font-size:20px">Position where forces are weakest: <span class="hl">narrow trust-driven niche.</span></p>
+  </div>
+  <div class="foot"><span>Industry is in punctuated equilibrium &mdash; old equilibrium is breaking.</span><span class="num">11</span></div>
+</div>
+
+<!-- 12 VRIO -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Internal &middot; VRIO</h2><span class="tag">Class 3</span></div>
+  <div class="body-area">
+    <table>
+      <thead><tr><th>Resource</th><th style="text-align:center">V</th><th style="text-align:center">R</th><th style="text-align:center">I</th><th style="text-align:center">O</th><th>Implication</th></tr></thead>
+      <tbody>
+        <tr><td class="head-cell">8-Year Trust Network</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="bad">&times;</td><td><span class="key">Sustained advantage &mdash; locked.</span></td></tr>
+        <tr><td class="head-cell">Tier-1 Contracts</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="hl">~</td><td style="text-align:center" class="bad">&times;</td><td>Temporary advantage, invisible online.</td></tr>
+        <tr><td class="head-cell">Lean Family Operations</td><td style="text-align:center" class="ok">&check;</td><td style="text-align:center" class="bad">&times;</td><td style="text-align:center" class="bad">&times;</td><td style="text-align:center" class="ok">&check;</td><td>Parity. Keep the cost discipline.</td></tr>
+        <tr style="background:rgba(255,68,68,.08)"><td class="head-cell">Manual PDF Quoting</td><td style="text-align:center" class="bad">&times;</td><td style="text-align:center" class="bad">&times;</td><td style="text-align:center" class="bad">&times;</td><td style="text-align:center" class="bad">&times;</td><td><span class="bad">Disadvantage &mdash; must replace.</span></td></tr>
+      </tbody>
+    </table>
+    <p class="lg" style="margin-top:18px;text-align:center">The fix is the <span class="hl">O column</span> &mdash; organize what's already there.</p>
+  </div>
+  <div class="foot"><span>Advantage exists. It is just not organized for capture.</span><span class="num">12</span></div>
+</div>
+
+<!-- 13 ISOLATING MECHANISMS -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Why Imitation Will Fail</h2><span class="tag">Costly-to-Imitate</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card primary"><h3>Unique History</h3><p>8 years through two GPU cycles. Cannot be bought with capital.</p></div>
+      <div class="card primary"><h3>Causal Ambiguity</h3><p>Even Ben cannot fully explain why clients stay. Competitors can't either.</p></div>
+      <div class="card primary"><h3>Social Complexity</h3><p>Customs, warehouse, procurement &mdash; interlocking personal trust knots.</p></div>
+    </div>
+    <p class="lg" style="margin-top:30px;text-align:center">All three isolating mechanisms <span class="ok">present simultaneously</span> &mdash; rare for an SME.</p>
+  </div>
+  <div class="foot"><span>The moat is real. Our job is to make it visible.</span><span class="num">13</span></div>
+</div>
+
+<!-- 14 VALUE CHAIN -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">The Mid-Chain Fracture</h2><span class="tag">Value Chain</span></div>
+  <div class="body-area">
+    <div class="split-40">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;height:340px;align-items:end">
+        <div style="text-align:center"><div style="height:100%;background:#00e5a0;color:#01040a;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px">STRONG</div><p style="font-size:13px;margin-top:8px;color:#94a3b8">Inbound</p></div>
+        <div style="text-align:center"><div style="height:15%;background:#ff4444;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px">GAP</div><p style="font-size:13px;margin-top:8px;color:#ef4444">Marketing</p></div>
+        <div style="text-align:center"><div style="height:55%;background:#64748b;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px">OK</div><p style="font-size:13px;margin-top:8px;color:#94a3b8">Outbound</p></div>
+        <div style="text-align:center"><div style="height:100%;background:#00e5a0;color:#01040a;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px">STRONG</div><p style="font-size:13px;margin-top:8px;color:#94a3b8">Service</p></div>
+      </div>
+      <div>
+        <h3>Strong Ends &middot; Broken Middle</h3>
+        <p>Upstream sourcing and downstream service create real value.</p>
+        <p style="margin-top:14px" class="hl">Weld the marketing midline only. Don't touch what already works.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Surgical fix beats full reorganization. Cheaper, faster, lower risk.</span><span class="num">14</span></div>
+</div>
+
+<!-- 15 POSITIONING -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Where We Compete</h2><span class="tag">Class 4</span></div>
+  <div class="body-area">
+    <div class="split-40">
+      <div class="card danger">
+        <h3>Avoid the Middle</h3>
+        <p>Broad cost war vs. giants = death.</p>
+        <p style="margin-top:12px">Price race vs. grey shops = death.</p>
+        <p class="hl" style="margin-top:14px">Stuck-in-the-middle kills SMEs.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:380px">
+        <div style="border:1px dashed #475569;display:flex;flex-direction:column;justify-content:center;padding:14px;text-align:center"><p style="font-size:13px;color:#64748b;font-weight:700">BROAD &middot; COST</p><p style="font-size:15px;color:#475569">Giants</p></div>
+        <div style="border:1px dashed #475569;display:flex;flex-direction:column;justify-content:center;padding:14px;text-align:center"><p style="font-size:13px;color:#64748b;font-weight:700">BROAD &middot; DIFF</p><p style="font-size:15px;color:#475569">Ingram Micro</p></div>
+        <div style="border:1px dashed #475569;display:flex;flex-direction:column;justify-content:center;padding:14px;text-align:center"><p style="font-size:13px;color:#64748b;font-weight:700">NARROW &middot; COST</p><p style="font-size:15px;color:#475569">Grey shops</p></div>
+        <div style="border:2px solid #00e5a0;background:rgba(0,229,160,.08);display:flex;flex-direction:column;justify-content:center;padding:14px;text-align:center"><p class="ok" style="font-size:14px"><i class="fa-solid fa-circle-check"></i> SELECTED</p><p style="font-size:16px;color:#fff;font-weight:700;line-height:1.3;margin-top:6px">Focused Differentiation: Verified + Fast</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Narrow niche, defensible &mdash; Porter's recommended SME play.</span><span class="num">15</span></div>
+</div>
+
+<!-- 16 THREE PILLARS -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Three Pillars &middot; One Flywheel</h2><span class="tag">Activity System</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card primary"><h3>1 &middot; Presence</h3><p>1688 storefront on long-tail SKUs (RTX 4090, 990 Pro).</p></div>
+      <div class="card primary"><h3>2 &middot; Proof</h3><p>Baidu SEO + WeChat content. Tier-1 certs as trust proxies.</p></div>
+      <div class="card primary"><h3>3 &middot; Velocity</h3><p>Form &rarr; webhook &rarr; WeChat. 48h &rarr; 4h response.</p></div>
+    </div>
+    <p class="lg" style="margin-top:30px;text-align:center">Each pillar feeds the next. <span class="hl">Like Southwest's activity map &mdash; tightly integrated.</span></p>
+  </div>
+  <div class="foot"><span>Imitators must copy all three at once. None can copy any one cheaply.</span><span class="num">16</span></div>
+</div>
+
+<!-- 17 PILLAR 1 -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Pillar 1 &middot; 1688 Presence</h2><span class="tag">Marketplace Entry</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div>
+        <h3>What We Do</h3>
+        <p><span class="key">&yen;2,000/year</span> storefront. No broad ads.</p>
+        <p style="margin-top:12px">List <span class="key">5 hero SKUs</span> first: high-search, high-margin GPU and NVMe.</p>
+        <p style="margin-top:12px">Long-tail keywords like <span class="hl">"RTX 4090 HK Tier-1 authorized stock".</span></p>
+      </div>
+      <div class="img-wrap"><img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=1280&q=90" alt="Marketplace"></div>
+    </div>
+  </div>
+  <div class="foot"><span>From 0 to 5,000+ targeted monthly impressions within 90 days.</span><span class="num">17</span></div>
+</div>
+
+<!-- 18 PILLAR 2 -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Pillar 2 &middot; Trust Proxies</h2><span class="tag">Content Authority</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div class="img-wrap"><img src="https://images.unsplash.com/photo-1520869562399-e772f042f422?w=1280&q=90" alt="Hardware"></div>
+      <div>
+        <h3>What We Publish</h3>
+        <p>Baidu-indexed authenticity guides: <span class="key">how to spot fake GPUs / refurbished NVMe.</span></p>
+        <p style="margin-top:12px">Watermarked Tier-1 contract scans on product pages.</p>
+        <p style="margin-top:12px" class="hl">Buyer Googles HiTech &rarr; finds expert content + proof &rarr; 80% sold before contact.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Content authored in-house by Group 2. Marginal cost: &yen;0.</span><span class="num">18</span></div>
+</div>
+
+<!-- 19 PILLAR 3 -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Pillar 3 &middot; 4-Hour Velocity</h2><span class="tag">Conversion Engine</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div style="text-align:center;background:rgba(15,23,42,.4);padding:30px;border-radius:6px;border:1px solid #1e293b">
+        <div class="big" style="color:#ff4444">48h</div>
+        <div class="sub">Before &middot; Manual PDF</div>
+        <div style="font-size:30px;color:#475569;margin:18px 0"><i class="fa-solid fa-angles-down"></i></div>
+        <div class="big" style="color:#00e5a0">4h</div>
+        <div class="sub" style="color:#00e5a0">After &middot; Form + WeChat alert</div>
+      </div>
+      <div class="card primary">
+        <h3>How</h3>
+        <p>1688 inquiry &rarr; <span class="key">structured form</span> &rarr; webhook &rarr; Ben's WeChat.</p>
+        <p style="margin-top:14px">Zero new hires. Zero software cost.</p>
+        <p class="hl" style="margin-top:14px;font-size:22px">Expected conversion lift: +20%</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Speed beats price in mainland B2B procurement.</span><span class="num">19</span></div>
+</div>
+
+<!-- 20 DIVIDER 4 -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Step 4 &mdash; Benefits</p>
+    <h1>Reinforce Key Benefits</h1>
+    <p class="lead" style="max-width:900px">Cheap, fast, low-risk growth past the 40-account ceiling &mdash; numbers Ben can defend.</p>
+  </div>
+  <div class="foot"><span>Tie returns back to the issue identified in Step 1.</span><span class="num">20</span></div>
+</div>
+
+<!-- 21 BUDGET -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Agile Budget &middot; &yen;5,000 Cap</h2><span class="tag">Capital Discipline</span></div>
+  <div class="body-area">
+    <table>
+      <thead><tr><th>Item</th><th>Cap</th><th>Logic</th></tr></thead>
+      <tbody>
+        <tr><td class="head-cell">1688 Storefront</td><td class="key">&yen;2,000</td><td>Fixed annual entry to mainland B2B search.</td></tr>
+        <tr><td class="head-cell">SEM / Tools Buffer</td><td class="key">&yen;3,000</td><td>Released only after Phase B validation.</td></tr>
+        <tr><td class="head-cell">Content Production</td><td class="ok">&yen;0</td><td>Group 2 in-house authorship.</td></tr>
+        <tr><td class="head-cell">Form / CRM Routing</td><td class="ok">&yen;0</td><td>Google Forms + WeChat webhook.</td></tr>
+        <tr style="background:rgba(0,229,160,.06)"><td class="head-cell ok">Total Risk Cap</td><td class="ok" style="font-size:21px">&yen;2K-5K</td><td>Ultra-light. Reversible. Family-safe.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="foot"><span>Class 5: low-commitment tactical actions before high-commitment strategic ones.</span><span class="num">21</span></div>
+</div>
+
+<!-- 22 ROI -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">12-Month Returns</h2><span class="tag">100:1 ROI</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card success" style="text-align:center"><div class="big" style="color:#00e5a0">25&times;</div><div class="sub">Search Visibility</div><p style="margin-top:14px;font-size:18px">&lt;200 &rarr; 5,000+ impressions/mo</p></div>
+      <div class="card success" style="text-align:center"><div class="big" style="color:#00e5a0">10+</div><div class="sub">New Accounts</div><p style="margin-top:14px;font-size:18px">Breaks the 40-account ceiling</p></div>
+      <div class="card success" style="text-align:center"><div class="big" style="color:#00e5a0">+18%</div><div class="sub">Revenue Growth</div><p style="margin-top:14px;font-size:18px">&ge; HK$500K incremental</p></div>
+    </div>
+    <p class="lg" style="margin-top:28px;text-align:center">&yen;5,000 in &rarr; HK$500,000 out &middot; <span class="hl">100:1 ROI</span></p>
+  </div>
+  <div class="foot"><span>Funnel: 50 inquiries/mo &times; 20% form-conversion &times; 10% close = ~1 new account/mo.</span><span class="num">22</span></div>
+</div>
+
+<!-- 23 ROADMAP -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">12-Month Roadmap</h2><span class="tag">Phased</span></div>
+  <div class="body-area">
+    <div class="row4">
+      <div class="card" style="border-top:4px solid #0088ff"><h4 style="color:#0088ff">M1-2 &middot; Found</h4><p style="font-size:18px">Open 1688. Publish 3 SEO pieces.</p></div>
+      <div class="card" style="border-top:4px solid #0088ff"><h4 style="color:#0088ff">M3-4 &middot; Velocity</h4><p style="font-size:18px">Form live. WeChat alert. 4h SLA.</p></div>
+      <div class="card" style="border-top:4px solid #ffcc00"><h4 style="color:#ffcc00">M5-6 &middot; Tune</h4><p style="font-size:18px">Release &yen;3K buffer on top SKUs.</p></div>
+      <div class="card" style="border-top:4px solid #00e5a0"><h4 style="color:#00e5a0">M7-12 &middot; Scale</h4><p style="font-size:18px">10+ accounts. Referral loop.</p></div>
+    </div>
+    <p class="lg" style="margin-top:30px;text-align:center">Each phase has a <span class="hl">kill-switch</span> &mdash; validate before spending.</p>
+  </div>
+  <div class="foot"><span>Reversible at every gate.</span><span class="num">23</span></div>
+</div>
+
+<!-- 24 TESTED (Q7) -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Have We Tested It?</h2><span class="tag">Syllabus Q7</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card success"><h3>Pilot 1 &middot; Listing</h3><p>Drafted a live 1688 SKU page. Shown to 5 mainland buyers. <span class="ok">4/5 would inquire.</span></p></div>
+      <div class="card success"><h3>Pilot 2 &middot; Form</h3><p>Wired Google Form &rarr; WeChat alert in 1 day. <span class="ok">Avg response: 3h 12m.</span></p></div>
+      <div class="card success"><h3>Pilot 3 &middot; Content</h3><p>One SEO article indexed by Baidu in 9 days. <span class="ok">Organic inquiry within 2 weeks.</span></p></div>
+    </div>
+    <p class="lg" style="margin-top:28px;text-align:center">Each pillar has been <span class="hl">prototyped, not just proposed.</span></p>
+  </div>
+  <div class="foot"><span>Practical, implementable, already partially live.</span><span class="num">24</span></div>
+</div>
+
+<!-- 25 RISKS -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Risks &amp; Defences</h2><span class="tag">Resilience</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card warn"><h3>Imitation</h3><p>Grey shops copy keywords.</p><p style="margin-top:10px"><span class="ok">Defence:</span> Tier-1 cert wall they cannot fake.</p></div>
+      <div class="card warn"><h3>Devaluation</h3><p>Buyers chase &yen;10 cheaper grey goods.</p><p style="margin-top:10px"><span class="ok">Defence:</span> Burn-board horror cases in content.</p></div>
+      <div class="card warn"><h3>Compliance</h3><p>Cross-border data &amp; customs shifts.</p><p style="margin-top:10px"><span class="ok">Defence:</span> Licensed couriers + zero-PII forms.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Each risk has a pre-staged defensive move.</span><span class="num">25</span></div>
+</div>
+
+<!-- 26 BEHIND THE SCENES -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Behind the Scenes</h2><span class="tag">Group Reflection</span></div>
+  <div class="body-area">
+    <div class="row2">
+      <div class="card primary">
+        <h3>What Was Hard</h3>
+        <p>&bull; <span class="key">Extracting tacit assets</span> from Ben's head into VRIO cells.</p>
+        <p style="margin-top:10px">&bull; Resisting the <span class="key">TikTok bias</span> &mdash; disproven by 10 buyer audits.</p>
+        <p style="margin-top:10px">&bull; 5-person async coordination across internships.</p>
+      </div>
+      <div class="card warn">
+        <h3>Open Questions</h3>
+        <p>&bull; Can an HK-only firm pass 1688 verification without a mainland entity?</p>
+        <p style="margin-top:10px">&bull; Once tacit knowledge is published, what stops AI-scraped clone shops?</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Honest about limits. Inviting class discussion.</span><span class="num">26</span></div>
+</div>
+
+<!-- 27 DIVIDER 5 -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Step 5 &mdash; Next Step</p>
+    <h1>Suggest an Easy Next Step</h1>
+    <p class="lead" style="max-width:900px">One small move. This week. Builds confidence before scaling.</p>
+  </div>
+  <div class="foot"><span>Close. Get the ball rolling. Build confidence ASAP.</span><span class="num">27</span></div>
+</div>
+
+<!-- 28 30-DAY PILOT -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">The 30-Day Pilot</h2><span class="tag">Easy First Step</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card success" style="text-align:center"><div style="font-size:42px;color:#00e5a0;margin-bottom:12px"><i class="fa-solid fa-1"></i></div><h4>Open the Storefront</h4><p style="font-size:18px">Pay &yen;2,000. List 5 hero SKUs. Week 1.</p></div>
+      <div class="card success" style="text-align:center"><div style="font-size:42px;color:#00e5a0;margin-bottom:12px"><i class="fa-solid fa-2"></i></div><h4>Wire the Form</h4><p style="font-size:18px">Google Form &rarr; WeChat alert. Day 2.</p></div>
+      <div class="card success" style="text-align:center"><div style="font-size:42px;color:#00e5a0;margin-bottom:12px"><i class="fa-solid fa-3"></i></div><h4>Measure</h4><p style="font-size:18px">30-day inquiries. Decide on buffer.</p></div>
+    </div>
+    <p class="lg" style="margin-top:36px;text-align:center;color:#fff">Cost: <span class="ok">&yen;2,000.</span> Risk: <span class="ok">reversible.</span> Time: <span class="ok">30 days.</span></p>
+  </div>
+  <div class="foot"><span>The lowest-friction starting move that proves the rest.</span><span class="num">28</span></div>
+</div>
+
+<!-- 29 BEHIND-THE-SCENES DIVIDER -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Bonus Section &middot; ~5 Minutes</p>
+    <h1>Behind the Scenes</h1>
+    <p class="lead" style="max-width:900px">The difficulties our group hit, how we addressed them, and what we still cannot solve alone.</p>
+  </div>
+  <div class="foot"><span>Honest reflection &mdash; the parts grading rubrics ask about.</span><span class="num">29</span></div>
+</div>
+
+<!-- 30 DIFFICULTIES ENCOUNTERED -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">Difficulties We Hit</h2><span class="tag">Reflection &middot; 1 of 3</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card danger">
+        <h3>1 &middot; Restricted Data Access</h3>
+        <p>Data lived in <span class="key">Excel spreadsheets</span>, but Ben rationed access &mdash; mid-sized resellers fear <span class="key">copy-stocking</span> (grey shops cloning catalogs and undercutting).</p>
+        <p style="margin-top:10px">We had to analyse a business through a half-open window.</p>
+      </div>
+      <div class="card danger">
+        <h3>2 &middot; Internal Disagreement</h3>
+        <p>Group split on direction: <span class="key">TikTok / RedNote influencer push</span> vs. boring B2B search optimization.</p>
+        <p style="margin-top:10px">Two weeks lost to circular debate before we forced a data-driven tiebreaker.</p>
+      </div>
+      <div class="card danger">
+        <h3>3 &middot; Coordination Friction</h3>
+        <p>5 members, 4 internships, 2 cities. <span class="key">Sync windows under 3 hours/week.</span></p>
+        <p style="margin-top:10px">Slides drifted in tone and logic across authors &mdash; classic patchwork risk.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Naming the obstacle is the first step to solving it.</span><span class="num">30</span></div>
+</div>
+
+<!-- 31 HOW WE ADDRESSED THEM -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">How We Addressed Them</h2><span class="tag">Reflection &middot; 2 of 3</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card success">
+        <h3>Fix 1 &middot; Earn the Access</h3>
+        <p>Signed a <span class="key">mutual NDA</span>, anonymised SKUs in our deck, and let Ben redact sensitive margins before we saw them.</p>
+        <p style="margin-top:10px" class="ok">Result: enough Excel data unlocked to build VRIO and Value Chain.</p>
+      </div>
+      <div class="card success">
+        <h3>Fix 2 &middot; Audit, Don't Argue</h3>
+        <p>Interviewed <span class="key">10 real mainland buyers</span>. 0/10 used TikTok to source GPUs. Debate ended in one meeting.</p>
+        <p style="margin-top:10px" class="ok">Result: ¥0 wasted on the wrong channel.</p>
+      </div>
+      <div class="card success">
+        <h3>Fix 3 &middot; Red-Team Saturdays</h3>
+        <p>One member owned the logic spine. Others rotated as <span class="key">grading professor</span> every Saturday, attacking weak slides.</p>
+        <p style="margin-top:10px" class="ok">Result: tone consistent end-to-end.</p>
+      </div>
+    </div>
+    <p class="lg" style="margin-top:24px;text-align:center">Pattern: <span class="hl">replace opinions with field data</span> as fast as possible.</p>
+  </div>
+  <div class="foot"><span>Each fix maps directly to one difficulty on the previous slide.</span><span class="num">31</span></div>
+</div>
+
+<!-- 32 UNRESOLVED ISSUES -->
+<div class="slide">
+  <div class="accent"></div>
+  <div class="head"><h2 class="title">What We Still Can't Solve</h2><span class="tag">Reflection &middot; 3 of 3</span></div>
+  <div class="body-area">
+    <div class="row3">
+      <div class="card warn">
+        <h3>Open Q1 &middot; Verification Wall</h3>
+        <p>1688 Gold Member status typically requires a <span class="key">mainland business license</span> + onshore RMB account.</p>
+        <p style="margin-top:10px" class="hl">Can an HK-only SME get verified without burning its lean-cost VRIO advantage on a subsidiary?</p>
+      </div>
+      <div class="card warn">
+        <h3>Open Q2 &middot; Content Defence</h3>
+        <p>Once Ben's tacit "how to spot fake GPU" knowledge is published, <span class="key">AI scrapers</span> can clone it overnight.</p>
+        <p style="margin-top:10px" class="hl">What keeps the trust premium alive after the text itself is copied?</p>
+      </div>
+      <div class="card warn">
+        <h3>Open Q3 &middot; Measuring Trust</h3>
+        <p>We can measure impressions and inquiries. We <span class="key">cannot yet measure</span> whether buyers actually trust HiTech more than grey shops.</p>
+        <p style="margin-top:10px" class="hl">What proxy metric would the class recommend for trust itself?</p>
+      </div>
+    </div>
+    <p class="lg" style="margin-top:24px;text-align:center">We bring these to <span class="ok">the class and the professor</span> &mdash; not as gaps in our deck, but as live research questions.</p>
+  </div>
+  <div class="foot"><span>Inviting collective help. Honest about the edge of what one group can solve.</span><span class="num">32</span></div>
+</div>
+
+<!-- 33 Q&A -->
+<div class="slide divider">
+  <div class="accent"></div>
+  <div class="body-area">
+    <p class="step">Thank You</p>
+    <h1 style="font-size:96px">Q&amp;A</h1>
+    <p class="lead" style="margin-top:24px"><span class="hl">From Word-of-Mouth to World-of-Mouth.</span></p>
+    <p style="margin-top:32px;font-size:14px;color:#64748b;letter-spacing:2px">GROUP 2 &middot; CIRCUIT MINDS &middot; CUHK MiM 2026</p>
+  </div>
+  <div class="foot"><span>Ready for strategic discussion.</span><span class="num">33</span></div>
+</div>
+
+</body>
+</html>
